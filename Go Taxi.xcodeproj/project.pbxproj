@@ -12,6 +12,7 @@
 		1558245C2A8420350040AB05 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1558245B2A8420350040AB05 /* Preview Assets.xcassets */; };
 		1558246A2A8423F10040AB05 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155824692A8423F10040AB05 /* HomeView.swift */; };
 		1558246C2A8425710040AB05 /* TaxiMapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1558246B2A8425710040AB05 /* TaxiMapViewRepresentable.swift */; };
+		1558246E2A8429980040AB05 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1558246D2A8429980040AB05 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,8 @@
 		1558245B2A8420350040AB05 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		155824692A8423F10040AB05 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1558246B2A8425710040AB05 /* TaxiMapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiMapViewRepresentable.swift; sourceTree = "<group>"; };
+		1558246D2A8429980040AB05 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		1558246F2A8433940040AB05 /* Go-Taxi-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Go-Taxi-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +56,7 @@
 		155824532A8420330040AB05 /* Go Taxi */ = {
 			isa = PBXGroup;
 			children = (
+				1558246F2A8433940040AB05 /* Go-Taxi-Info.plist */,
 				155824662A8423470040AB05 /* App */,
 				155824652A8423440040AB05 /* Core */,
 				155824642A8423410040AB05 /* Extensions */,
@@ -82,6 +86,7 @@
 		155824632A84233E0040AB05 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				1558246D2A8429980040AB05 /* LocationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1558246E2A8429980040AB05 /* LocationManager.swift in Sources */,
 				1558246A2A8423F10040AB05 /* HomeView.swift in Sources */,
 				1558246C2A8425710040AB05 /* TaxiMapViewRepresentable.swift in Sources */,
 				155824552A8420330040AB05 /* Go_TaxiApp.swift in Sources */,
@@ -329,7 +335,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Go Taxi/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Go-Taxi-Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow us to your location.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -357,7 +364,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Go Taxi/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Go-Taxi-Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow us to your location.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
