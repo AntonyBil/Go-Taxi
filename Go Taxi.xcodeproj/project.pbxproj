@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		155824552A8420330040AB05 /* Go_TaxiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155824542A8420330040AB05 /* Go_TaxiApp.swift */; };
-		155824572A8420330040AB05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155824562A8420330040AB05 /* ContentView.swift */; };
 		155824592A8420350040AB05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 155824582A8420350040AB05 /* Assets.xcassets */; };
 		1558245C2A8420350040AB05 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1558245B2A8420350040AB05 /* Preview Assets.xcassets */; };
+		1558246A2A8423F10040AB05 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155824692A8423F10040AB05 /* HomeView.swift */; };
+		1558246C2A8425710040AB05 /* TaxiMapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1558246B2A8425710040AB05 /* TaxiMapViewRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		155824512A8420330040AB05 /* Go Taxi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Go Taxi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		155824542A8420330040AB05 /* Go_TaxiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Go_TaxiApp.swift; sourceTree = "<group>"; };
-		155824562A8420330040AB05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		155824582A8420350040AB05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1558245B2A8420350040AB05 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		155824692A8423F10040AB05 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1558246B2A8425710040AB05 /* TaxiMapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiMapViewRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +53,11 @@
 		155824532A8420330040AB05 /* Go Taxi */ = {
 			isa = PBXGroup;
 			children = (
-				155824542A8420330040AB05 /* Go_TaxiApp.swift */,
-				155824562A8420330040AB05 /* ContentView.swift */,
+				155824662A8423470040AB05 /* App */,
+				155824652A8423440040AB05 /* Core */,
+				155824642A8423410040AB05 /* Extensions */,
+				155824632A84233E0040AB05 /* Managers */,
+				155824622A84233B0040AB05 /* Models */,
 				155824582A8420350040AB05 /* Assets.xcassets */,
 				1558245A2A8420350040AB05 /* Preview Content */,
 			);
@@ -65,6 +70,60 @@
 				1558245B2A8420350040AB05 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		155824622A84233B0040AB05 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		155824632A84233E0040AB05 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		155824642A8423410040AB05 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		155824652A8423440040AB05 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				155824682A8423A70040AB05 /* ViewModel */,
+				155824672A8423A30040AB05 /* Views */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		155824662A8423470040AB05 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				155824542A8420330040AB05 /* Go_TaxiApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		155824672A8423A30040AB05 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				155824692A8423F10040AB05 /* HomeView.swift */,
+				1558246B2A8425710040AB05 /* TaxiMapViewRepresentable.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		155824682A8423A70040AB05 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +196,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				155824572A8420330040AB05 /* ContentView.swift in Sources */,
+				1558246A2A8423F10040AB05 /* HomeView.swift in Sources */,
+				1558246C2A8425710040AB05 /* TaxiMapViewRepresentable.swift in Sources */,
 				155824552A8420330040AB05 /* Go_TaxiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
