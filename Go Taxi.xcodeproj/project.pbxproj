@@ -13,6 +13,10 @@
 		1558246A2A8423F10040AB05 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155824692A8423F10040AB05 /* HomeView.swift */; };
 		1558246C2A8425710040AB05 /* TaxiMapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1558246B2A8425710040AB05 /* TaxiMapViewRepresentable.swift */; };
 		1558246E2A8429980040AB05 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1558246D2A8429980040AB05 /* LocationManager.swift */; };
+		155824752A8532540040AB05 /* LocationSearchActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155824742A8532540040AB05 /* LocationSearchActivationView.swift */; };
+		155824772A8534F40040AB05 /* MapViewActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155824762A8534F40040AB05 /* MapViewActionButton.swift */; };
+		155824792A8536990040AB05 /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155824782A8536990040AB05 /* LocationSearchView.swift */; };
+		1558247B2A853B7C0040AB05 /* LocationSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1558247A2A853B7C0040AB05 /* LocationSearchResultCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		1558246B2A8425710040AB05 /* TaxiMapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiMapViewRepresentable.swift; sourceTree = "<group>"; };
 		1558246D2A8429980040AB05 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		1558246F2A8433940040AB05 /* Go-Taxi-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Go-Taxi-Info.plist"; sourceTree = SOURCE_ROOT; };
+		155824742A8532540040AB05 /* LocationSearchActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchActivationView.swift; sourceTree = "<group>"; };
+		155824762A8534F40040AB05 /* MapViewActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewActionButton.swift; sourceTree = "<group>"; };
+		155824782A8536990040AB05 /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
+		1558247A2A853B7C0040AB05 /* LocationSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,13 +126,49 @@
 		155824672A8423A30040AB05 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				155824692A8423F10040AB05 /* HomeView.swift */,
-				1558246B2A8425710040AB05 /* TaxiMapViewRepresentable.swift */,
+				155824712A8531D80040AB05 /* LocationSearch */,
+				155824702A8531C60040AB05 /* Home */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
 		155824682A8423A70040AB05 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		155824702A8531C60040AB05 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				155824692A8423F10040AB05 /* HomeView.swift */,
+				1558246B2A8425710040AB05 /* TaxiMapViewRepresentable.swift */,
+				155824762A8534F40040AB05 /* MapViewActionButton.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		155824712A8531D80040AB05 /* LocationSearch */ = {
+			isa = PBXGroup;
+			children = (
+				155824732A8531E80040AB05 /* ViewModel */,
+				155824722A8531E30040AB05 /* Views */,
+			);
+			path = LocationSearch;
+			sourceTree = "<group>";
+		};
+		155824722A8531E30040AB05 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				155824742A8532540040AB05 /* LocationSearchActivationView.swift */,
+				155824782A8536990040AB05 /* LocationSearchView.swift */,
+				1558247A2A853B7C0040AB05 /* LocationSearchResultCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		155824732A8531E80040AB05 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -201,10 +245,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				155824792A8536990040AB05 /* LocationSearchView.swift in Sources */,
 				1558246E2A8429980040AB05 /* LocationManager.swift in Sources */,
+				155824772A8534F40040AB05 /* MapViewActionButton.swift in Sources */,
 				1558246A2A8423F10040AB05 /* HomeView.swift in Sources */,
 				1558246C2A8425710040AB05 /* TaxiMapViewRepresentable.swift in Sources */,
 				155824552A8420330040AB05 /* Go_TaxiApp.swift in Sources */,
+				155824752A8532540040AB05 /* LocationSearchActivationView.swift in Sources */,
+				1558247B2A853B7C0040AB05 /* LocationSearchResultCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
