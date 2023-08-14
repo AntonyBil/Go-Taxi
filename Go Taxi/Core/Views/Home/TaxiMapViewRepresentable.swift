@@ -12,6 +12,7 @@ struct TaxiMapViewRepresentable: UIViewRepresentable {
     
     let mapView = MKMapView()
     let locationManager = LocationManager()
+    @EnvironmentObject var locationViewModel: LocationSearchViewModel
     
     //make maoView
     func makeUIView(context: Context) -> some UIView {
@@ -24,7 +25,9 @@ struct TaxiMapViewRepresentable: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UIViewType, context: Context) {
-        
+        if let selectedLocation = locationViewModel.selectedLocation {
+            print("DEBAG: Selected lcation in map view \(selectedLocation)")
+        }
     }
     
     // make coordinates
