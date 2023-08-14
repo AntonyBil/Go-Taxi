@@ -25,8 +25,8 @@ struct TaxiMapViewRepresentable: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UIViewType, context: Context) {
-        if let selectedLocation = locationViewModel.selectedLocation {
-            print("DEBAG: Selected lcation in map view \(selectedLocation)")
+        if let coordinate = locationViewModel.selectedLocationCoordinate {
+            print("DEBAG: Selected lcation in map view \(coordinate)")
         }
     }
     

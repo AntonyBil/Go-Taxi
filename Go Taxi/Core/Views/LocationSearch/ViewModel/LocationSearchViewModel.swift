@@ -13,7 +13,7 @@ class LocationSearchViewModel: NSObject, ObservableObject {
     //MARK: - Properties
     
     @Published var results = [MKLocalSearchCompletion]()
-    @Published var selectedLocation: String?
+    @Published var selectedLocationCoordinate: CLLocationCoordinate2D?
     
     private let searchCoompleter = MKLocalSearchCompleter()
     var queryFragment: String = "" {
@@ -30,13 +30,30 @@ class LocationSearchViewModel: NSObject, ObservableObject {
     }
     
     //MARK: - Helpers
-    func selectLocation(_ location: String) {
-        self.selectedLocation = location
+    func selectLocation(_ localSearch: MKLocalSearchCompletion) {
+        locationSerch(forLocalSearchCompletion: localSearch) { response, error in
+            if let error = error {
+                print("DEBUG: Locationsearch faild with error \(error.localizedDescription)")
+                return
+            }
+            
+            guard let item = response?.mapItems.first else { return }
+            let coordinate = item.placemark.coordinate
+            self.selectedLocationCoordinate = coordinate
+            print("DEBUG: Location coordinates \(coordinate)")
+        }
+    }
+    
+    func locationSerch(forLocalSearchCompletion localSearch: MKLocalSearchCompletion,
+                       completion: @escaping MKLocalSearch.CompletionHandler) {
+        let searchRequest = MKLocalSearch.Request()
+        searchRequest.naturalLanguageQuery = localSearch.title.appending(localSearch.subtitle)
+        let search = MKLocalSearch(request: searchRequest)
         
-        print("DEBUG: Selected location is \(self.selectedLocation)")
+        search.start(completionHandler: completion)
     }
 }
-//MARK: - MKLocalSearchCompleterDelegate
+    //MARK: - MKLocalSearchCompleterDelegate
 extension LocationSearchViewModel: MKLocalSearchCompleterDelegate {
     func completerDidUpdateResults(_ completer: MKLocalSearchCompleter) {
         self.results = completer.results
