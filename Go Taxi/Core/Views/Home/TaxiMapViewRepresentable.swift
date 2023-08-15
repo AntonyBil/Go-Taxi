@@ -26,7 +26,7 @@ struct TaxiMapViewRepresentable: UIViewRepresentable {
     
     func updateUIView(_ uiView: UIViewType, context: Context) {
         if let coordinate = locationViewModel.selectedLocationCoordinate {
-            print("DEBAG: Selected lcation in map view \(coordinate)")
+            context.coordinator.addAndSelectAnnotation(withCoordinate: coordinate)
         }
     }
     
@@ -35,18 +35,21 @@ struct TaxiMapViewRepresentable: UIViewRepresentable {
         return MapCoordinator(perent: self)
     }
 }
-
+//MARK: - Extansion
 extension TaxiMapViewRepresentable {
     
     class MapCoordinator: NSObject, MKMapViewDelegate {
+        
+        //MARK: - Properties
         let perent: TaxiMapViewRepresentable
         
+        //MARK: - Lifecycle
         init(perent: TaxiMapViewRepresentable) {
             self.perent = perent
             super.init()
         }
         
-        //update user coordinates
+        //MARK: - MKMapViewDelegate
         func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
             let region = MKCoordinateRegion(
                 center: CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude),
@@ -54,6 +57,18 @@ extension TaxiMapViewRepresentable {
             )
             
             perent.mapView.setRegion(region, animated: true)
+        }
+        
+        //MARK: - Helpers
+        func addAndSelectAnnotation(withCoordinate coordinate: CLLocationCoordinate2D) {
+            perent.mapView.removeAnnotations(perent.mapView.annotations)
+            
+            let anno = MKPointAnnotation()
+            anno.coordinate = coordinate
+            perent.mapView.addAnnotation(anno)
+            perent.mapView.selectAnnotation(anno, animated: true)
+            
+            perent.mapView.showAnnotations(perent.mapView.annotations, animated: true)
         }
     }
 }
