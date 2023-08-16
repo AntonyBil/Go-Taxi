@@ -12,6 +12,7 @@ struct TaxiMapViewRepresentable: UIViewRepresentable {
     
     let mapView = MKMapView()
     let locationManager = LocationManager()
+    @Binding var mapState: MapViewState
     @EnvironmentObject var locationViewModel: LocationSearchViewModel
     
     //make maoView
@@ -25,10 +26,25 @@ struct TaxiMapViewRepresentable: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UIViewType, context: Context) {
-        if let coordinate = locationViewModel.selectedLocationCoordinate {
-            context.coordinator.addAndSelectAnnotation(withCoordinate: coordinate)
-            context.coordinator.configurePolyline(withDestinationCoordinate: coordinate)
+        print("DEBUG: Map state is \(mapState)")
+        
+        switch mapState {
+        case .noInput:
+            context.coordinator.clearmapViewAndRecenterOnUserLocation()
+            break
+        case .searchingForLocation:
+            break
+        case .locationSelected:
+            if let coordinate = locationViewModel.selectedLocationCoordinate {
+                context.coordinator.addAndSelectAnnotation(withCoordinate: coordinate)
+                context.coordinator.configurePolyline(withDestinationCoordinate: coordinate)
+            }
+            break
         }
+        
+//        if mapState == .noInput {
+//            context.coordinator.clearmapViewAndRecenterOnUserLocation()
+//        }
     }
     
     // make coordinates
@@ -44,6 +60,7 @@ extension TaxiMapViewRepresentable {
         //MARK: - Properties
         let perent: TaxiMapViewRepresentable
         var userLocationCoordinate: CLLocationCoordinate2D?
+        var currentRegion: MKCoordinateRegion?
         
         //MARK: - Lifecycle
         init(perent: TaxiMapViewRepresentable) {
@@ -58,6 +75,8 @@ extension TaxiMapViewRepresentable {
                 center: CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude),
                 span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
             )
+            
+            self.currentRegion = region
             
             perent.mapView.setRegion(region, animated: true)
         }
@@ -107,6 +126,15 @@ extension TaxiMapViewRepresentable {
                 
                 guard let route = response?.routes.first else { return }
                 completion(route)
+            }
+        }
+        
+        func clearmapViewAndRecenterOnUserLocation() {
+            perent.mapView.removeAnnotations(perent.mapView.annotations)
+            perent.mapView.removeOverlays(perent.mapView.overlays)
+            
+            if let currentRegion = currentRegion {
+                perent.mapView.setRegion(currentRegion, animated: true)
             }
         }
     }

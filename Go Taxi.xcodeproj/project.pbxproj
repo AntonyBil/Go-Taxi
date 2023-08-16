@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15149ECB2A8D4B4100504298 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15149ECA2A8D4B4100504298 /* MapViewState.swift */; };
 		155824552A8420330040AB05 /* Go_TaxiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155824542A8420330040AB05 /* Go_TaxiApp.swift */; };
 		155824592A8420350040AB05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 155824582A8420350040AB05 /* Assets.xcassets */; };
 		1558245C2A8420350040AB05 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1558245B2A8420350040AB05 /* Preview Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15149ECA2A8D4B4100504298 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
 		155824512A8420330040AB05 /* Go Taxi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Go Taxi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		155824542A8420330040AB05 /* Go_TaxiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Go_TaxiApp.swift; sourceTree = "<group>"; };
 		155824582A8420350040AB05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		155824622A84233B0040AB05 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				15149ECA2A8D4B4100504298 /* MapViewState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				1581EAA62A8A8B5E008C1CC2 /* LocationSearchViewModel.swift in Sources */,
 				155824792A8536990040AB05 /* LocationSearchView.swift in Sources */,
 				1558246E2A8429980040AB05 /* LocationManager.swift in Sources */,
+				15149ECB2A8D4B4100504298 /* MapViewState.swift in Sources */,
 				155824772A8534F40040AB05 /* MapViewActionButton.swift in Sources */,
 				1558246A2A8423F10040AB05 /* HomeView.swift in Sources */,
 				1558246C2A8425710040AB05 /* TaxiMapViewRepresentable.swift in Sources */,
