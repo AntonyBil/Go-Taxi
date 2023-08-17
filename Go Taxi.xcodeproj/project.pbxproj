@@ -19,6 +19,7 @@
 		155824792A8536990040AB05 /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155824782A8536990040AB05 /* LocationSearchView.swift */; };
 		1558247B2A853B7C0040AB05 /* LocationSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1558247A2A853B7C0040AB05 /* LocationSearchResultCell.swift */; };
 		1581EAA62A8A8B5E008C1CC2 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1581EAA52A8A8B5E008C1CC2 /* LocationSearchViewModel.swift */; };
+		158BE8312A8EA1320092C2ED /* RideRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158BE8302A8EA1320092C2ED /* RideRequestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		155824782A8536990040AB05 /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
 		1558247A2A853B7C0040AB05 /* LocationSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultCell.swift; sourceTree = "<group>"; };
 		1581EAA52A8A8B5E008C1CC2 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
+		158BE8302A8EA1320092C2ED /* RideRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRequestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		155824652A8423440040AB05 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				158BE82F2A8EA0FD0092C2ED /* Trips */,
 				155824682A8423A70040AB05 /* ViewModel */,
 				155824672A8423A30040AB05 /* Views */,
 			);
@@ -179,6 +182,14 @@
 				1581EAA52A8A8B5E008C1CC2 /* LocationSearchViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		158BE82F2A8EA0FD0092C2ED /* Trips */ = {
+			isa = PBXGroup;
+			children = (
+				158BE8302A8EA1320092C2ED /* RideRequestView.swift */,
+			);
+			path = Trips;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +265,7 @@
 				1581EAA62A8A8B5E008C1CC2 /* LocationSearchViewModel.swift in Sources */,
 				155824792A8536990040AB05 /* LocationSearchView.swift in Sources */,
 				1558246E2A8429980040AB05 /* LocationManager.swift in Sources */,
+				158BE8312A8EA1320092C2ED /* RideRequestView.swift in Sources */,
 				15149ECB2A8D4B4100504298 /* MapViewState.swift in Sources */,
 				155824772A8534F40040AB05 /* MapViewActionButton.swift in Sources */,
 				1558246A2A8423F10040AB05 /* HomeView.swift in Sources */,
