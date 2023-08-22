@@ -97,7 +97,6 @@ extension TaxiMapViewRepresentable {
             perent.mapView.addAnnotation(anno)
             perent.mapView.selectAnnotation(anno, animated: true)
             
-            perent.mapView.showAnnotations(perent.mapView.annotations, animated: true)
         }
         
         func configurePolyline(withDestinationCoordinate coordinate: CLLocationCoordinate2D) {
@@ -105,6 +104,9 @@ extension TaxiMapViewRepresentable {
             getDestinationRoute(from: userLocationCoordinate,
                                 to: coordinate) { route in
                 self.perent.mapView.addOverlay(route.polyline)
+                let rect = self.perent.mapView.mapRectThatFits(route.polyline.boundingMapRect,
+                                                               edgePadding: .init(top: 64, left: 32, bottom: 500, right: 32))
+                self.perent.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
             }
         }
         
