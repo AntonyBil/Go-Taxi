@@ -16,7 +16,7 @@ struct LocationSearchResultCell: View {
                 .resizable()
                 .foregroundColor(.blue)
                 .accentColor(.white)
-                .frame().frame(width: 40, height: 40)
+                .frame(width: 40, height: 40)
             
             VStack(alignment: .leading, spacing: 4) {
                 Text(title)

@@ -21,6 +21,7 @@
 		156F4B842A9531FE003A4DDE /* RideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156F4B832A9531FE003A4DDE /* RideType.swift */; };
 		1581EAA62A8A8B5E008C1CC2 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1581EAA52A8A8B5E008C1CC2 /* LocationSearchViewModel.swift */; };
 		158BE8312A8EA1320092C2ED /* RideRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158BE8302A8EA1320092C2ED /* RideRequestView.swift */; };
+		15D588732A9683190017802C /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D588722A9683190017802C /* Double.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		156F4B832A9531FE003A4DDE /* RideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideType.swift; sourceTree = "<group>"; };
 		1581EAA52A8A8B5E008C1CC2 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
 		158BE8302A8EA1320092C2ED /* RideRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRequestView.swift; sourceTree = "<group>"; };
+		15D588722A9683190017802C /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		155824642A8423410040AB05 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				15D588722A9683190017802C /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				155824792A8536990040AB05 /* LocationSearchView.swift in Sources */,
 				1558246E2A8429980040AB05 /* LocationManager.swift in Sources */,
 				158BE8312A8EA1320092C2ED /* RideRequestView.swift in Sources */,
+				15D588732A9683190017802C /* Double.swift in Sources */,
 				15149ECB2A8D4B4100504298 /* MapViewState.swift in Sources */,
 				155824772A8534F40040AB05 /* MapViewActionButton.swift in Sources */,
 				1558246A2A8423F10040AB05 /* HomeView.swift in Sources */,
