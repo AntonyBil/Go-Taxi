@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		15149ECB2A8D4B4100504298 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15149ECA2A8D4B4100504298 /* MapViewState.swift */; };
+		154CDE602A98EFCA0007A6DA /* UberLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154CDE5F2A98EFCA0007A6DA /* UberLocation.swift */; };
 		155824552A8420330040AB05 /* Go_TaxiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155824542A8420330040AB05 /* Go_TaxiApp.swift */; };
 		155824592A8420350040AB05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 155824582A8420350040AB05 /* Assets.xcassets */; };
 		1558245C2A8420350040AB05 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1558245B2A8420350040AB05 /* Preview Assets.xcassets */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		15149ECA2A8D4B4100504298 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
+		154CDE5F2A98EFCA0007A6DA /* UberLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberLocation.swift; sourceTree = "<group>"; };
 		155824512A8420330040AB05 /* Go Taxi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Go Taxi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		155824542A8420330040AB05 /* Go_TaxiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Go_TaxiApp.swift; sourceTree = "<group>"; };
 		155824582A8420350040AB05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				15149ECA2A8D4B4100504298 /* MapViewState.swift */,
 				156F4B832A9531FE003A4DDE /* RideType.swift */,
+				154CDE5F2A98EFCA0007A6DA /* UberLocation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				1558246A2A8423F10040AB05 /* HomeView.swift in Sources */,
 				1558246C2A8425710040AB05 /* TaxiMapViewRepresentable.swift in Sources */,
 				155824552A8420330040AB05 /* Go_TaxiApp.swift in Sources */,
+				154CDE602A98EFCA0007A6DA /* UberLocation.swift in Sources */,
 				155824752A8532540040AB05 /* LocationSearchActivationView.swift in Sources */,
 				1558247B2A853B7C0040AB05 /* LocationSearchResultCell.swift in Sources */,
 				156F4B842A9531FE003A4DDE /* RideType.swift in Sources */,
