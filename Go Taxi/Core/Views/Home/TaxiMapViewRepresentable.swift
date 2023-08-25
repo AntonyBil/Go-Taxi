@@ -35,9 +35,12 @@ struct TaxiMapViewRepresentable: UIViewRepresentable {
             break
         case .locationSelected:
             if let coordinate = locationViewModel.selectedUberLocation?.coordinate {
+                print("DEBUG: Adding stuf to map")
                 context.coordinator.addAndSelectAnnotation(withCoordinate: coordinate)
                 context.coordinator.configurePolyline(withDestinationCoordinate: coordinate)
             }
+            break
+        case .polylineAdded:
             break
         }
         
@@ -103,6 +106,7 @@ extension TaxiMapViewRepresentable {
             perent.locationViewModel.getDestinationRoute(from: userLocationCoordinate,
                                                          to: coordinate) { route in
                 self.perent.mapView.addOverlay(route.polyline)
+                self.perent.mapState = .polylineAdded
                 let rect = self.perent.mapView.mapRectThatFits(route.polyline.boundingMapRect,
                                                                edgePadding: .init(top: 64, left: 32, bottom: 500, right: 32))
                 self.perent.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
